@@ -47,6 +47,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
                 updateOfEntityValueNotNull(existingEntity::setEmail, entity.email());
                 updateOfEntityValueNotNull(existingEntity::setPhone, entity.phone());
                 updateOfEntityValueNotNull(existingEntity::setUsername, entity.username());
+                updateOfEntityValueNotNull(existingEntity::setPassword, entity.password());
             }
         });
     }

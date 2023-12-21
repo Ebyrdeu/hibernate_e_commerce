@@ -65,6 +65,10 @@ public class CustomerMenu implements Menu {
         Utils.log("Enter username");
         var username = scanner.nextLine();
 
+        Utils.log("Enter Password");
+        var password = Utils.hashPassword(scanner.nextLine());
+
+
         Utils.log("Enter phone");
         var phone = scanner.nextLine();
 
@@ -72,6 +76,7 @@ public class CustomerMenu implements Menu {
         customer.setLastName(lastName);
         customer.setEmail(email);
         customer.setUsername(checkOnEmpty(username));
+        customer.setPassword(password);
         customer.setPhone(checkOnEmpty(phone));
 
         customerRepository.add(customer);
@@ -118,6 +123,10 @@ public class CustomerMenu implements Menu {
         Utils.log("Enter username");
         var username = scanner.nextLine();
 
+
+        Utils.log("Enter Password");
+        var password = Utils.hashPassword(scanner.nextLine());
+
         Utils.log("Enter phone");
         var phone = scanner.nextLine();
 
@@ -127,6 +136,7 @@ public class CustomerMenu implements Menu {
         customer.setEmail(checkOnEmpty(email));
         customer.setUsername(checkOnEmpty(username));
         customer.setPhone(checkOnEmpty(phone));
+        customer.setPassword(checkOnEmpty(password));
 
         customerRepository.update(customer);
 

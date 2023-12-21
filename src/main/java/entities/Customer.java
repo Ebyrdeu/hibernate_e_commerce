@@ -28,6 +28,9 @@ public class Customer {
     @Column(name = "username", length = 15)
     private String username;
 
+    @Column(name = "password")
+    private String password;
+
     @Column(name = "phone", length = 15, unique = true)
     private String phone;
 
@@ -57,6 +60,10 @@ public class Customer {
 
     public String username() {
         return username;
+    }
+
+    public String password() {
+        return password;
     }
 
     public String phone() {
@@ -93,6 +100,11 @@ public class Customer {
 
     public Customer setUsername(String username) {
         this.username = username;
+        return this;
+    }
+
+    public Customer setPassword(String password) {
+        this.password = password;
         return this;
     }
 

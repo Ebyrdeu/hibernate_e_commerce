@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS `customer`
     last_name   VARCHAR(255)        NOT NULL,
     email       VARCHAR(100) UNIQUE NOT NULL,
     username    VARCHAR(255),
+    password    VARCHAR(255)        NOT NULL,
     phone       VARCHAR(15) UNIQUE,
     created_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
